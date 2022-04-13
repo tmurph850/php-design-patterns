@@ -16,6 +16,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        /**
+         * Testing
+         */
         $this->app->bind(PaymentGateway::class, function($app) {
             return new PaymentGateway(
               new CreditCardDriver()
